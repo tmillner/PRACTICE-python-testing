@@ -13,9 +13,16 @@
 ##def home_page(request):
 ##    return django.http.HttpResponse()
 
-from django.http import HttpResponse
+##from django.http import HttpResponse
+##
+### Create your views here.
+##home_page = None #can't use this to resolve url bc it isn't a function (it isn't callable)
+##def home_page(request):
+##    return HttpResonse('<html><title>To-Do list</title></html>')
+
+from django.shortcuts import render
 
 # Create your views here.
 home_page = None #can't use this to resolve url bc it isn't a function (it isn't callable)
 def home_page(request):
-    return HttpResponse('<html><title>To-Do lists</title></html>')
+    return render(request, "home.html")
